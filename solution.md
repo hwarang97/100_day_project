@@ -3,7 +3,7 @@ SyntaxError means error occus while interpreter complie source code to byte code
 scanning is can converted to interpreting code. String literal means string which is written in source code. It looks like similar between literal and value. Value is stored in memory, literal is written in source code.
 
 ## Why is f-string needed?
-When we concatanate string to string using int value, type convercation is needed to convert int type to str type. It's not handy. But if you use f-string, python implicitly convert int to str type so you don't need to convert it using str() manually.
+When we concatanate string to string using int value, type conversion is needed to avoid type error. It's not handy. But if you use f-string, python implicitly convert int to str type so you don't need to convert it using str() manually.
 
 ### print
 ```python
