@@ -23,3 +23,21 @@ List is a collections that keep order. If there are objects and they have relati
 states_of_america = ["Delaware", "Pennsylvania", "New Jersey", "Georgia", "Connecticut", "Massachusetts", "Maryland", "South Carolina", "New Hampshire", "Virginia", "New York", "North Carolina", "Rhode Island", "Vermont", "Kentucky", "Tennessee", "Ohio", "Louisiana", "Indiana", "Mississippi", "Illinois", "Alabama", "Maine", "Missouri", "Arkansas", "Michigan", "Florida", "Texas", "Iowa", "Wisconsin", "California", "Minnesota", "Oregon", "Kansas", "West Virginia", "Nevada", "Nebraska", "Colorado", "North Dakota", "South Dakota", "Montana", "Washington", "Idaho", "Wyoming", "Utah", "Oklahoma", "New Mexico", "Arizona", "Alaska", "Hawaii"]
 ```
 The states is items of america and if you want to store them in some order, list is good choice.
+
+## Why do we use built-in function?
+We can make same function in various way. In general, using built-in function is better than making function manually.
+1. Built-in function is usually faster than typed code.
+2. Better readability
+"Built-in functions in Python are generally faster than custom Python code because most built-in functions are implemented in C, which is compiled and optimized for performance. In contrast, pure Python code is processed by the Python Virtual Machine (PVM) through an API, which introduces additional overhead and makes it slower."
+
+```python
+# case1
+print(max(student_scores))
+
+# case2
+max_score = 0
+for score in student_scores:
+    if score > max_score:
+        max_score = score
+print(max_score)
+```
