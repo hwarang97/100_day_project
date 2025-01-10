@@ -41,3 +41,33 @@ for score in student_scores:
         max_score = score
 print(max_score)
 ```
+
+## Use dictionary when you want to use swtich-case statement in python
+When i implement calculator, if-elif statment is used instead of switch case statment in python. 
+```python
+def calculate(operator: str, first_num: float, second_num: float):
+    calculation_result = 0.0
+    if operator == "+":
+        calculation_result = add(first_num, second_num)
+    elif operator == "-":
+        calculation_result = substract(first_num, second_num)
+    elif operator == "*":
+        calculation_result = multiply(first_num, second_num)
+    elif operator == "/":
+        calculation_result = divide(first_num, second_num)
+    else:
+        print("Invalid operator")
+        return
+    return calculation_result
+```
+But, there is a way to simply the code. Using dictionay, there no need to make cacluate function.
+```python
+operations = {
+    "+" : add,
+    "-" : substract,
+    "*" : multiply,
+    "/" : divide,
+}
+
+result = operations[operator](first_number, second_number)
+```
