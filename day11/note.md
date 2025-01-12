@@ -68,3 +68,19 @@ __After__
 if user_score == 0:
 ```
 
+## Write Docstrings when you create function
+To apply KISS rule in my code, it is important to clarify obvious purpose of function. Writing docs is helpful to make it simple.
+```python
+def calculate_sum(cards: list) -> int:
+    """Take a list of cards and return the score calculated from the cards
+
+    Args:
+        cards (list): containing cards
+
+    Returns:
+        int: sum of cards
+        - 0: blackjack
+        - Otherwise: the score calculated from cards
+    """
+```
+
