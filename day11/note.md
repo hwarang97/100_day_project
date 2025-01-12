@@ -55,19 +55,16 @@ if get_another_card == 'y':
     continue
 ```
 
-## When using nested while loops, it is better for readability to separate them into individual functions.
+## Simplify condition
 __Before__
 ```python
-one_more_game = True
-while one_more_game:
-    ...
-    # game start
-    while is_game_starting:
-        ...
-
+# blackjack
+if (len(user_cards) == 2) and (11 in user_cards) and (10 in user_cards):
 ```
 
 __After__
 ```python
-
+# blackjack
+if user_score == 0:
 ```
+
