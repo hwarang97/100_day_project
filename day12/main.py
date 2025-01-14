@@ -21,13 +21,16 @@ def compare(guess: int, actual_answer: int):
 
 def set_difficulty():
     """set difficulty, initial attempts and return initial attempts"""
-    while True:
-        difficulty_input = input("Choose a difficulty. Type 'easy' or 'hard': ")
+    invalid_difficulty = True
+    initial_attempts = -1
+    while invalid_difficulty:
+        difficulty_input = input("Choose a difficulty. Type 'easy' or 'hard': ").lower()
         try:
             initial_attempts = DIFFICULTY_LEVELS[difficulty_input]
-            return initial_attempts
+            invalid_difficulty = False
         except KeyError:
-            print(f"Invalid difficulty: {difficulty_input}")
+            print(f"Invalid difficulty: {difficulty_input}\nTry again.")
+    return initial_attempts
 
 
 print(logo)
